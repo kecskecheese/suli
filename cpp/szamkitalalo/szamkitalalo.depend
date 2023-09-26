@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1694517856 source:h:\cpp\szamkitalalo\main.cpp
+	<iostream>
+	<ctime>
+	<stdlib.h>
+

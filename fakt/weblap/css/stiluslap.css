@@ -42,7 +42,11 @@ h2{
 
 table{
     background-color: #00ff00;
-    box-shadow: 20px 20px 60px #00ff00 ;
+    box-shadow: 20px 20px 60px #00ff00;
+    border: 8px solid #ff0000;
+    margin-left: auto;
+    margin-right: auto;
+    transform: rotate3d(3, 3, 7, 120deg);
 }
 
 .egyenilink{
@@ -55,4 +59,61 @@ table{
 
 .egyenilink:active{
     color: #ffff00;
+}
+
+th, td{
+    border: 15px solid brown;
+    padding: 10px;
+    transform: rotate3d(2, 3, 5, 66deg);
+}
+
+th{
+    background-color: #ff00ff;
+    text-shadow: 3px 3px #0000ff;
+    box-shadow: 20px 20px 60px #ff00ff;
+    transform: rotate3d(5, 7, 3, 83deg);
+}
+
+caption{
+    background-color: #ffff00;
+    color: #0000ff;
+    box-shadow: 20px 20px 60px #ffff00;
+    font-weight: 1000;
+}
+
+tr:nth-child(even){
+    background-color: #00ffff;
+    box-shadow: 20px 20px 60px #00ffff;
+}
+
+img{
+    height: 800px;
+    border: 50px dashed #00ff00;
+    border-radius: 600px;
+    margin-right: 70px;
+    box-shadow: 60px 60px 60px #00ff00;
+}
+
+video{
+    height: 800px;
+    box-shadow: 60px 60px 60px #00ff00;
+    border: 50px dashed #00ffff;
+    border-radius: 500px;
+    transform: rotate3d(3, 3, 7, 120deg);
+}
+
+figcaption{
+    text-align: center;
+    color: #00ff00;
+    font-weight: 1000;
+    background-color: #00ffff;
+    text-shadow: 8px 8px #00ff00;
+}
+
+figure{
+    background-color: #ff00ff;
+    border-radius: 60px;
+    border: 80px double #00ff00;
+    transform: rotate3d(3, 3, 7, 120deg);
+    box-shadow: 60px 60px 60px #00ff00;
 }
