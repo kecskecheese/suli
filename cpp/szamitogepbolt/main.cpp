@@ -12,8 +12,8 @@ int main()
     cin >> n;
     for (int i=1; i<=n; i++)
     {
-        cout << "Adja meg a(z) " << i << ". termek adatait:"
-        cin >> fajta[i] >> raktar[i] << ar[i];
+        cout << "Adja meg a(z) " << i << ". termek adatait:";
+        cin >> fajta[i] >> raktar[i] >> ar[i];
     }
 
     //Kiiras
@@ -21,8 +21,11 @@ int main()
     cout << n << endl;
     for (int i=1; i<=n; i++)
     {
-        cout << fajta[i] << " " << raktar[i] << " " << ar[i];
+        cout << fajta[i] << " " << raktar[i] << " " << ar[i] << endl;
     }
+
+    //1. feladat
+
 
     return 0;
 }
