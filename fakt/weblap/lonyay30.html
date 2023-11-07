@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lónyay30</title>
+</head>
+<body>
+    <img src="kepek/lonyay.png" alt="lonyay" id="lonyay" hidden>
+
+    <canvas id="Canvas" width="520" height="760" style="border: 3px solid red;"></canvas>
+
+    <script type="text/javascript">
+        var canvas = document.getElementById('Canvas');
+        var ctx = canvas.getContext('2d');
+
+        ctx.fillStyle = "Cornsilk";
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        ctx.font = "130px Garamond";
+        ctx.textAlign = "center";
+        ctx.fillStyle = "Blue";
+        ctx.fillText("Lónyay", canvas.width/2, 100);
+
+        ctx.lineWidth = 12;
+        ctx.strokeStyle = "DarkGoldenRod";
+
+        ctx.beginPath();
+        ctx.arc(100, 200, 50, 1.25*Math.PI, 0.5*Math.PI);
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.arc(100, 200, 50, 1.5*Math.PI, 0.75*Math.PI);
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.arc(100, 330, 80, 0, 2*Math.PI);
+        ctx.stroke();
+
+    </script>
+</body>
+</html>

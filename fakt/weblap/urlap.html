@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Űrlap</title>
+</head>
+<body>
+    <h2>Űrlap</h2>
+    <form action="mailto:hurkamajom@gmail.com" method="post" enctype="text/plain">
+        <label for="vnev">Vezetéknév:</label>
+        <input type="text" id="vnev" name="vnev">
+        <label for="knev">Keresztnév:</label>
+        <input type="text" id="knev" name="knev"><br>
+
+        <input type="radio" id="ferfi" name="nem" value="ferfi">
+        <label for="ferfi">Férfi</label>
+        <input type="radio" id="no" name="nem" value="no">
+        <label for="no">Nő</label><br>
+
+        <input type="checkbox" name="reggeli" id="reggeli" value="reggeli">
+        <label for="reggeli">Reggeli</label>
+        <input type="checkbox" name="ebed" id="ebed" value="ebed">
+        <label for="reggeli">Ebéd</label>
+        <input type="checkbox" name="uzsonna" id="uzsonna" value="uzsonna">
+        <label for="reggeli">Uzsonna</label><br>
+
+        <label for="nap">Hány napra kérem:</label>
+        <select id="nap" name="nap">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select><br>
+
+        <input type="submit" value="Elküld">
+        <input type="reset" value="Töröl">
+    </form>
+</body>
+</html>
