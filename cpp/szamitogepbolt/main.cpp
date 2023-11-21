@@ -25,7 +25,21 @@ int main()
     }
 
     //1. feladat
+    int s=0;
+    for(int i=1; i<=n; i++)
+    {
+        s=s+raktar[i];
+    }
+    cout << "A raktaron levo termekek szama: " << s << endl;
 
+    //2. feladat
+    int osszeg=0;
+    for(int i=1; i<=n; i++)
+    {
+        osszeg=osszeg+ar[i];
+    }
+    cout << fixed;
+    cout << "Az atlag ar: " << (float)osszeg/n << endl;
 
     return 0;
 }

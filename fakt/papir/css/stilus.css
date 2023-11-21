@@ -26,14 +26,22 @@ a, a:visited, a:active {
     padding: 2px;
     border-spacing: 2px;
     width: 650px;
-    background-color: #485808;
 }
 
 .magassag60 {
     height: 60px;
+    color: white;
+    background-color: #485808;
+    text-align: center;
 }
 
 h1 {
     color: white;
-    text-align: center;
+}
+
+.kep {
+    width: 200px;
+    border: 1px solid black;
+    margin-left: 225px;
+    margin-right: 225px;
 }
