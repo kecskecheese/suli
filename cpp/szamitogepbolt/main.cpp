@@ -54,22 +54,35 @@ int main()
     cout << "A legdragabb termek adatai: " << fajta[maxind] <<" "<<raktar[maxind]<<" "<< ar[maxind] << endl;
 
     //4. feladat
-    int sokvan=raktar[1];
-    for(int i=1; i<=n; i++)
+    bool van;
+    int i=1;
+    while(i<=n && !(raktar[i]>10))
     {
-        if (raktar[i]>10)
-            {
-                sokvan=raktar[i];
-            }
+        i=i+1;
     }
-    if (sokvan>10)
+    van=(i<=n);
+    if (van)
     {
-        cout << "Van olyan termek amibol 10-nel tobb van" <<endl;
+        cout  << "Van olyan termek, amibol tobb, mint 10 van raktaron" << endl;
     }
-    else{
-        cout << "Nincs olyan termek amibol 10-nel tobb van" << endl;
+    else {
+        cout  << "Nincs olyan termek, amibol tobb, mint 10 van raktaron" << endl;
     }
 
+    //5. feladat
+    cout << "Melyik tipusra kivancsi? (m,p,n)" << endl;
+    char tipus;
+    cin >> tipus;
+
+    if (tipus="n"||"p"||"m")
+    {
+        int db=0;
+        for (int i=1;)
+    }
+    else{
+        cout << "te barom" << endl;
+        return 0;
+    }
 
     return 0;
 }
