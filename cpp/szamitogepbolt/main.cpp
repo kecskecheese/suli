@@ -42,7 +42,7 @@ int main()
     cout << "Az atlag ar: " << (float)osszeg/n << endl;
 
     //3. feladat
-    int maxind=ar[1];
+    int maxind=1;
     for(int i=2; i<=n; i++)
     {
         if (ar[maxind]<ar[i])
@@ -71,18 +71,19 @@ int main()
 
     //5. feladat
     cout << "Melyik tipusra kivancsi? (m,p,n)" << endl;
-    char tipus;
-    cin >> tipus;
+    char befajta;
+    cin >> befajta;
 
-    if (tipus="n"||"p"||"m")
+    int db=0;
+    for (int i=1; i<=n; i++)
     {
-        int db=0;
-        for (int i=1;)
+        if (fajta[i] == befajta)
+        {
+            db = db+1; //db++
+        }
     }
-    else{
-        cout << "te barom" << endl;
-        return 0;
-    }
+    cout << "A " << befajta << " fajta termekbol " << db << " kulonbozo van." << endl;
+
 
     return 0;
 }
