@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1707228262 source:h:\cpp\oroszrulett\main.cpp
+	<iostream>
+	<windows.h>
+	<cstdlib>
+
