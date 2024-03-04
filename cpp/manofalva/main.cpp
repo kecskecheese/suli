@@ -4,10 +4,10 @@ using namespace std;
 
 struct TIdok
 {
-    int ora, perc
+    int ora, perc;
 };
 
-int percbe (TIdok ido)
+int Percbe (TIdok ido)
 {
     return ido.ora * 60 + ido.perc;
 }
@@ -20,27 +20,44 @@ TIdok OraPercbe(int percek)
     return ido;
 }
 
+void IdoKiir(TIdok ido)
+{
+    cout << ido.ora << " " << ido.perc << endl;
+}
+
 int main()
 {
-    int ora[100], perc[100], autok, vam;
-    cin >> autok >> vam;
-    if (autok < 1 || autok > 100)
+    int i, n, p;
+    TIdok erkezes[101], belepes[101];
+    cout << "Add meg az adatokat\n";
+    cin >> n >> p;
+    if (n < 1 || n > 100)
     {
         cout << "Tul sok vagy tul keves auto\n";
         return 1;
-    }else if (vam < 1 || vam > 120)
+    }else if (p < 1 || p > 120)
     {
         cout << "Tul sok vagy tul keves vamvizsgalati ido\n";
         return 1;
     }
-    for (int i = 1; i <= autok; i++)
+    for (int i = 1; i <= n; i++)
     {
-        cin >> ora[i] >> perc[i];
+        cin >> erkezes[i].ora >> erkezes[i].perc;
     }
 
-    for (int i = 1; i <= autok; i++)
+    belepes[1] = OraPercbe(Percbe(erkezes[1]) + p);
+    IdoKiir(belepes[1]);
+    for(int i = 2; i<=n; i++)
     {
-        cout << ora[i] << perc[i] + vam << endl; // ez még rossz
+        if(Percbe(erkezes[i]) >= Percbe(belepes[i - 1]))
+        {
+            belepes[i] = OraPercbe(Percbe(erkezes[i]) + p);
+        }
+        else
+        {
+            belepes[i] = OraPercbe(Percbe(belepes[i - 1]) + p);
+        }
+        IdoKiir(belepes[i]);
     }
 
     return 0;
