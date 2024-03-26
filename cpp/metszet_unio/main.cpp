@@ -16,7 +16,7 @@ void TombKiir(int n, int t[101], string fajlnev)
 
 int main()
 {
-    int i, n, m, db, x[101], y[101], z[101];
+    int j, i, n, m, db, x[101], y[101], z[101];
     ifstream f;
     f.open("be.txt");
     f >> n;
@@ -33,6 +33,7 @@ int main()
 
     f.close();
 
+    //Metszet
     db = 0;
     for(i = 1; i <= n; i++)
     {
@@ -47,5 +48,29 @@ int main()
             z[db] = x[i];
         }
     }
+    TombKiir(db, z, "metszet.txt");
+    //Unió
+    int db2, z2[202];
+    db2 = n;
+
+    for (int i = 1; i <= n; i++)
+    {
+        z2[i] = x[i];
+    }
+    for (j = 1; j <= m; j++)
+    {
+        i = 1;
+        while (i <= n && x[i] != y[j])
+        {
+            i++;
+        }
+        if (i > n)
+        {
+            db2++;
+            z2[db2] = y[j];
+        }
+    }
+    TombKiir(db2, z2, "unio.txt");
+
     return 0;
 }

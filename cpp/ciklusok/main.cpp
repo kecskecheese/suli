@@ -4,36 +4,69 @@ using namespace std;
 
 int main()
 {
-    cout << "1. feladat" << endl;
-    for (int i = 1; i <= 100; i++)
+    for(int i = 1; i <= 8; i++)
     {
-        cout << i << " ";
+        for(int j = 1; j <= 10; j++)
+        {
+        cout << "*";
+        }
+        cout << endl;
     }
+
     cout << endl;
 
-    cout << "2. feladat" << endl;
-    for (int i = 100;i>= 100; i--)
+    for(int i = 1; i <= 8; i++)
     {
-        cout << i << " ";
-    }
-    cout << endl;
-
-    cout << "3. feladat" << endl;
-    for (int i = 1; i <= 100; i++)
-    {
-        cout << i << "*";
-    }
-    cout << endl;
-
-    cout << "4. feladat" << endl;
-    for (int j = 1; j <= 8; j++)
-    {
-        for (int j = 1; j <= 10; j++)
+        for(int j = 1; j <= i; j++)
         {
             cout << "*";
         }
         cout << endl;
     }
+
     cout << endl;
+
+    for(int i = 1; i <= 8; i++)
+    {
+        for(int j = 1; j <= i; j++)
+        {
+            if (j == i)
+            {
+                cout << "*";
+            }
+            else{
+                cout << " ";
+            }
+        }
+        cout << endl;
+    }
+
+    cout << endl;
+
+    for(int i = 1; i <= 8; i++)
+    {
+        for(int j = 1; j <= i; j++)
+        {
+            if (j == i || j == 1)
+            {
+                cout << "*";
+            }
+            else{
+                cout << " ";
+            }
+        }
+        cout << endl;
+    }
+
+    cout << endl;
+//vicces
+/*    for(;;)
+    {
+        for(;;)
+        {
+        cout << "*";
+        }
+        cout << endl;
+    }*/
     return 0;
 }
